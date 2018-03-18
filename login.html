@@ -18,10 +18,11 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col">
-        1 of 2
+      <div class="col" style="padding:0px; overflow:hidden;">
+          <div class="bnk-login">
+          </div>
       </div>
-      <div class="col">
+      <div class="col" style="padding:0px;">
         <div id="login">
           <form action="" class="login-form" method="POST">
             <div class="username-field-login">
@@ -34,7 +35,7 @@
               <input type="password" required>
             </div>
             <div class="submit-field-login">
-              <input type="submit" value="Sign In" required>
+              <input type="submit" value="Sign In" class="white-button">
             </div>
           </form>
         </div>
@@ -44,12 +45,62 @@
 
 
         <div id="register">
-            <h2>Sign Up</h2>
-                <h5>It’s free and always will be.</h5>
+          <h2>Sign Up</h2>
+          <h5>It’s free and always will be.</h5>
+          <form action="" class="register-form">
+            <div>
+              <h6>First Name : </h6>
+              <input type="text" required>
+            </div>
+
+            <div>
+              <h6>Last Name : </h6>
+              <input type="text" required>
+            </div>
+
+            <div>
+              <h6>Username : </h6>
+              <input type="text" required>
+            </div>
+
+            <div>
+              <h6>Password : </h6>
+              <input type="text" required>
+            </div>
+
+            <div>
+              <h6>Your Email : </h6>
+              <input type="text" required>
+            </div>
+
+            <div>
+              <h6>I am : </h6>
+              <select>
+                <option value="male">Male</option>
+                <option value="fe-male">Fe Male</option>
+              </select>
+            </div>
+
+            <div>
+              <input type="submit" style="margin-left:90px; width:320px;" class="pink-button">
+            </div>
+          </form>
+
         </div>
+
+        <div class="sparator">
+        </div>
+
+        <div class="login-credit">
+          <span>MARKET48 is a part of project in Information Technology Fundamentals subject, IT@KMITL.
+© 2018 MARKET48</span>
+</div>
+
       </div>
     </div>
   </div>
+
+
 
 
   <!-- JAVASCRIPT -->

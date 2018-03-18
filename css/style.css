@@ -1,62 +1,149 @@
-.pink-txt{
+.pink-txt {
   color: #d787df;
 }
 
-.sparator{
-  width:100%;
+.sparator {
+  width: 100%;
   height: 1px;
   background-color: #efefef;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-input[type="password"],input[type="text"]{
+input[type="password"], input[type="text"] {
   height: 45px;
-  padding-left: 20px;
+  padding-left: 10px;
   border-radius: 4px;
   border: 1px solid #efefef;
 }
 
-/* Login */
-
-#login{
-  margin-top: 20px;
-}
-.login-form{
-  display: flex;
-  flex-direction: row;
+select {
+  height: 45px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 4px;
+  border: 1px solid #efefef;
 }
 
-.login-form div{
-  width: 270px;
-  margin-right: 20px;
-}
-.username-field-login input[type="text"], .password-field-login input[type="password"]{
-  width: 100%;
-  margin-bottom: 4px;
-}
-
-
-.username-field-login h6, .password-field-login h6{
-  margin-bottom: 4px;
-}
-
-.submit-field-login{
-  display: flex;
-  margin-top: 22px;
-}
-
-.submit-field-login input{
+.white-button {
   background-color: #fff;
   padding: 0px 20px 0px 20px;
   border-radius: 4px;
   border: 1px solid #efefef;
   height: 45px;
-  color:#d787df;
+  color: #d787df;
   vertical-align: middle;
+  transition: all .2s ease;
+}
+
+.white-button:hover {
+  color: #fff;
+  background-color: #d787df;
+}
+
+.pink-button {
+  background-color: #d787df;
+  padding: 0px 20px 0px 20px;
+  border-radius: 4px;
+  border: 1px solid #efefef;
+  height: 45px;
+  color: #fff;
+  vertical-align: middle;
+}
+
+input[type="password"]:focus, input[type="text"]:focus {
+  border-color: #d787df;
+}
+
+/* Login */
+
+#login {
+  margin-top: 20px;
+  margin-left: 59px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: row;
+}
+
+.login-form div {
+  width: 270px;
+  margin-right: 20px;
+}
+
+.username-field-login input[type="text"], .password-field-login input[type="password"] {
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.username-field-login h6, .password-field-login h6 {
+  margin-bottom: 4px;
+}
+
+.submit-field-login {
+  display: flex;
+  margin-top: 22px;
 }
 
 /* Register */
 
-#register{
+#register {
+  margin-left: 59px;
+}
+
+#register h2 {
+  font-weight: bold;
+  color: #d787df;
+}
+
+#register h5 {
+  margin-bottom: 20px;
+}
+
+.register-form div {
+  display: flex;
+  margin-left: 20px;
+  margin-bottom: 4px;
+}
+
+.register-form input[type="password"], input[type="text"] {
+  width: 320px;
+}
+
+.register-form h6 {
+  width: 90px;
+  font-weight: 400;
+  padding-top: 10px;
+}
+
+.login-credit {
+  width: 320px;
+  margin-left: 169px;
+  word-wrap: break-word;
+  text-align: center;
+  color: #acacac;
+}
+
+/* Login-Left */
+
+.bnk-login {
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/bnk-login.png);
+}
+
+.login-logo {
+  width: 40%;
+  position: absolute;
+  background-color: #d787df;
+  height: 100vh;
+  top: 0;
+  -ms-transform: skewY(20deg);
+  /* IE 9 */
+  -webkit-transform: skewY(20deg);
+  /* Safari 3-8 */
+  transform: skewY(20deg);
 }
