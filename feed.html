@@ -1,24 +1,118 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>Login | BNK 48</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- BOOTSRAP -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-
-    <!-- STYLE -->
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Login | BNK 48</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- BOOTSRAP -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300i" rel="stylesheet">
+  <!-- STYLE -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Awsome ICON -->
+  <link rel="stylesheet" href="css/fontawesome-all.css">
+  <!-- Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 </head>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+
+
 <body>
-
-
   <header>
-    
+    <div class="container" style="width:1010px;">
+      <div class="row">
+        <div class="col">
+          <div id="logo">
+            <h2>MARKET48</h2>
+          </div>
+        </div>
+        <div class="col">
+          <div class="header-search">
+            <input type="text" name="search" placeholder="ค้นหา">
+          </div>
+        </div>
+        <div class="col">
+          <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="profile_icon" aria-expanded="false">
+              <img src="images/jennis.jpg" alt="">
+            </div>
+          </a>
+
+
+          <div class="profile_dropdown dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <ul>
+              <li>
+                <a href="">โปรไฟล์ส่วนตัว</a>
+
+              </li>
+
+              <li>
+                <a href="">แก้ไขโปรไฟล์</a>
+              </li>
+
+              <li>
+                <a href="">จัดการโพสต์</a>
+              </li>
+
+              <li>
+                <a href="">ยืนยันตัวตน</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
+
+
+  <div class="container" style="max-width:1010px;">
+    <div class="row" style="margin-top:20px;">
+      <div class="col-8">
+        <div class="new_post">
+          <form action="">
+            <div class="top_new_post">
+              <div class="new_post_icon">
+                <img src="images/jennis.jpg" alt="">
+              </div>
+              <div class="description_new_post">
+
+                <textarea class="text_area_new_post" name="textarea" rows="10" cols="50" placeholder="INWZA007 คุณต้องการขายอะไร ?"></textarea>
+              </div>
+            </div>
+            <div class="separator">
+            </div>
+            <div class="bottom_new_post">
+
+              <!-- Category Selector -->
+              <div class="new_post_field">
+              <h6>asdas</h6>
+              <input type="text" name="category" required></div>
+              <!-- Upload Button -->
+              <a href="#">
+                <div class="btn_upload_images white-button ">
+                  <span><i class="far fa-image"></i> เพิ่มรูปภาพ</span>
+                </div>
+              </a>
+
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-4">
+        sidebars
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay"></div>
+
   <!-- JAVASCRIPT -->
-  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
 
 </body>
+
 </html>

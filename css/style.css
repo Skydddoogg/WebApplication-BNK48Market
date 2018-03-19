@@ -1,6 +1,15 @@
-#logo{
+
+
+#logo {
   font-family: 'Montserrat', sans-serif;
   color: #d787df;
+  display: table;
+  height: 100%;
+}
+
+#logo h2{
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .pink-txt {
@@ -36,11 +45,18 @@ select {
   background-color: #fff;
   padding: 0px 20px 0px 20px;
   border-radius: 4px;
-  border: 1px solid #efefef;
+  border: 1px solid #dddfe2;
   height: 45px;
   color: #d787df;
+  font-size: 15px;
   vertical-align: middle;
   transition: all .2s ease;
+  display: table;
+}
+
+.white-button span{
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .white-button:hover {
@@ -68,10 +84,12 @@ input[type="password"]:focus, input[type="text"]:focus {
   margin-top: 20px;
   margin-left: 59px;
 }
-.login-checkbox{
-	background-color: #000;
-	padding: 9px;
+
+.login-checkbox {
+  background-color: #000;
+  padding: 9px;
 }
+
 .login-form {
   display: flex;
   flex-direction: row;
@@ -117,7 +135,7 @@ input[type="password"]:focus, input[type="text"]:focus {
   margin-bottom: 4px;
 }
 
-.register-form input[type="password"], input[type="text"] {
+.register-form input[type="password"], .register-form input[type="text"] {
   width: 320px;
 }
 
@@ -140,7 +158,7 @@ input[type="password"]:focus, input[type="text"]:focus {
 
 .bnk-login {
   width: 100%;
-  height: 100vh  ;
+  height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(../images/bnk-login.png);
@@ -157,4 +175,200 @@ input[type="password"]:focus, input[type="text"]:focus {
   -webkit-transform: skewY(20deg);
   /* Safari 3-8 */
   transform: skewY(20deg);
+}
+
+/* Feed */
+
+body {
+  background-color: #f7f7f7;
+}
+
+header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #fff;
+  width: 100%;
+      display: inline-table;
+}
+
+.header-search{
+  height: 100%;
+  display: table;
+}
+
+.header-search input {
+  display: table-cell;
+  vertical-align: middle;
+  color: #9698a4;
+  font-size: 13px;
+  background-color: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 999999999px;
+  padding-left: 40px;
+}
+
+.header-search:after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: "\f002";
+  color: #9698a4;
+  position: absolute;
+  top: 11px;
+  left: 30px;
+}
+
+.profile_icon {
+  border-radius: 50%;
+  position: relative;
+  height: 50px;
+  width: 50px;
+  float: right;
+  border:2px solid #d787df;
+}
+
+.profile_icon:after{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: "\f107";
+  position: absolute;
+  top:10px;
+  right: -20px;
+  color: #d787df;
+}
+
+.profile_icon img {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border:2px solid #fff;
+  border-radius: 50%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+.profile_dropdown{
+  position:absolute;
+  width: 200px;
+  /* display: flex; */
+  right: 0px;
+  top:60px !important;
+  border-radius: 4px;
+  border: 1px solid #efefef;
+  padding: 0;
+}
+
+.profile_dropdown ul{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.profile_dropdown ul li{
+  list-style: none;
+  display: flex;
+}
+
+.profile_dropdown ul li a{
+  background-color: #fff;
+  color: #878b91;
+  text-decoration: none;
+  padding:10px 20px 10px 20px;
+  border-bottom: 1px solid #efefef;
+  width:100%;
+}
+
+.profile_dropdown ul li:last-child a {
+  border: none;
+}
+
+.profile_dropdown ul li a:hover{
+  background-color: #d787df;
+  color: #fff;
+}
+
+.overlay {
+  background-color: rgba(0,0,0,.5);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  display: none;
+}
+
+.new_post{
+  width: 629px;
+  background-color: #fff;
+  border: 1px solid #efefef;
+  border-radius: 4px;
+  z-index: 3;
+  position: relative;
+}
+
+.new_post_icon {
+  border-radius: 50%;
+  position: relative;
+  height: 65px;
+  width: 65px;
+  border:2px solid #d787df;
+}
+
+.top_new_post{
+    display: flex;
+      padding: 20px;
+      padding-bottom: 0px;
+}
+
+.bottom_new_post{
+      padding: 0 20px 20px 20px;
+}
+
+.new_post_icon img {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border:2px solid #fff;
+  border-radius: 50%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+
+.description_new_post{
+  width:500px;
+  margin-left: 20px;
+}
+.description_new_post textarea{
+  border:none;
+  width: 100%;
+  font-size: 17px;
+  margin-top: 10px;
+    resize: none;
+}
+
+.description_new_post textarea::placeholder{
+  color: #bec2c9;
+  font-size: 16px !important;
+}
+
+.description_new_post textarea:focus{
+  outline: none;
+}
+
+.description_new_post textarea::-webkit-scrollbar {
+  width: 0px;
+  background-color: transparent;
+}
+
+.description_new_post textarea:focus{
+  border:none;
+}
+
+.new_post_field{
+  
 }

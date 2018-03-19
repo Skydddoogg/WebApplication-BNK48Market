@@ -7,9 +7,11 @@
     <!-- BOOTSRAP -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300i" rel="stylesheet">
     <!-- STYLE -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Awsome ICON -->
+    <link rel="stylesheet" href="css/fontawesome-all.css">
 </head>
 <body>
 
