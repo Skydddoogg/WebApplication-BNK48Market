@@ -1,120 +1,106 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title></title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
 </head>
+
 <body>
 
 
-<form action="SubmitUserQueryServlet" method="POST">
+	<form action="SubmitUserQueryServlet" method="POST">
 
-    <div id="category-area">
-        Category: 
-        <select name="category" id="category">
-           
+		<div id="category-area">
+			<select name="category" id="category">
+								<option value="0" selected="selected">เลือกหมวดหมู่</option>
                 <option value="1">Photo Set</option>
-           
+
                 <option value="11">CD</option>
-           
+
                 <option value="25">แท่งไฟ</option>
-           
+
         </select>
-    </div>
+		</div>
 
-    <br>
+		<br>
 
-    <div id="set-area">
-        Set:
-        
-        <select name="set" id="category_set">
-           
-                <option value="2">Set 1 (Debut)</option>
-           
-                <option value="3">Set 2 (ชุดไทยสงกรานต์)</option>
-           
-                <option value="4">Set 3 (Road Show ครั้งแรก)</option>
-           
-                <option value="5">Set 4 (Aitakatta)</option>
-           
-                <option value="6">Set 5 (Halloween 2017)</option>
-           
-                <option value="7">Set 6 (ลอยกระทง 2017)</option>
-           
-                <option value="8">Set 7 (Christmas 2017)</option>
-           
-                <option value="9">Set 8 (Koisuru Fortune Cookie คุกกี้เสี่ยงทาย)</option>
-           
+		<div id="set-area" style="display:none;">
+			<select name="set" id="category_set">
         </select>
-    </div>
-    <br>
+		</div>
+		<br>
 
-    
-    <div id="category_type">
-        Type:
-        
-             <input type="checkbox" name="type" value="14" />Cover 
-        
-             <input type="checkbox" name="type" value="15" />Random 
-        
-    </div>
-    
-    <input type="submit" value="Submit" />
-    
-</form>
+
+		<div id="category_type">
+			Type:
+
+			<input type="checkbox" name="type" value="14" />Cover
+
+			<input type="checkbox" name="type" value="15" />Random
+
+		</div>
+
+		<input type="submit" value="Submit" />
+
+	</form>
 	<script type="text/javascript">
-        
-        function updateCategorySet() {
-                $('#category_type').empty();
-	        $.ajax({
-	            url: './api/category',
-	            dataType: 'json',
-	            type: 'GET',
-	            // This is query string i.e. country_id=123
-	            data: {super_id : $('#category').val()},
-	            success: function(data) {
-                        if(data.length == 0)
-                            $('#set-area').hide();
-                        else
-                            $('#set-area').show();
-                        
-	                $('#category_set').empty(); // clear the current elements in select box
-	                for (row in data) {
-	                    $('#category_set').append($('<option></option>').attr('value', data[row].id).text(data[row].name));
-	                }
-                        updateCategoryType();
-	            },
-	            error: function(jqXHR, textStatus, errorThrown) {
-	                alert(errorThrown);
-	            }
-	        });
-	}
-            
-        function updateCategoryType() {
-	        $.ajax({
-	            url: './api/category',
-	            dataType: 'json',
-	            type: 'GET',
-	            // This is query string i.e. country_id=123
-	            data: {super_id : $('#category_set').val()},
-	            success: function(data) {
-	                $('#category_type').empty(); // clear the current elements in select box
-	                for (row in data) {
-	                    $('#category_type').append($('<input type="checkbox" name="type" />').attr('value', data[row].id)).append(data[row].name);
-	                }
-	            },
-	            error: function(jqXHR, textStatus, errorThrown) {
-	                alert(errorThrown);
-	            }
-	        });
-	}
-        
-	$('#category').change(updateCategorySet);
-	$('#category_set').change(updateCategoryType);
+		function updateCategorySet() {
+			$('#category_type').empty();
+			$.ajax({
+				url: 'http://market48.toppy.in.th/api/category',
+				dataType: 'json',
+				type: 'GET',
+				// This is query string i.e. country_id=123
+				data: {
+					super_id: $('#category').val()
+				},
+				success: function(data) {
+					if (data.length == 0)
+						$('#set-area').hide();
+					else
+						$('#set-area').show();
 
+					$('#category_set').empty(); // clear the current elements in select box
+					for (row in data) {
+						// console.log(row)
+						$('#category_set').append($('<option></option>').attr('value', data[row].id).text(data[row].name));
+					}
+					updateCategoryType();
+				},
+				error: function(jqXHR, textStatus, errorThrown) {
+					alert(errorThrown);
+				}
+			});
+		}
+
+		function updateCategoryType() {
+			$.ajax({
+				url: 'http://market48.toppy.in.th/api/category',
+				dataType: 'json',
+				type: 'GET',
+				// This is query string i.e. country_id=123
+				data: {
+					super_id: $('#category_set').val()
+				},
+				success: function(data) {
+					$('#category_type').empty(); // clear the current elements in select box
+					for (row in data) {
+						$('#category_type').append($('<input type="checkbox" name="type" />').attr('value', data[row].id)).append(data[row].name);
+					}
+				},
+				error: function(jqXHR, textStatus, errorThrown) {
+					alert(errorThrown);
+				}
+			});
+		}
+		$('#category').change(updateCategorySet);
+		$('#category_set').change(updateCategoryType);
+
+		// });
 	</script>
 </body>
-</html>
 
+</html>

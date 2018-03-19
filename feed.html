@@ -15,10 +15,14 @@
   <link rel="stylesheet" href="css/fontawesome-all.css">
   <!-- Script -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <!-- Ajax -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Privew Image Upload -->
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/jquery.uploadPreview.js"></script>
+  <script type="text/javascript" src="js/jquery.uploadPreview.min.js"></script>
 </head>
-<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.js"></script>
-
 
 <body>
   <header>
@@ -83,21 +87,124 @@
                 <textarea class="text_area_new_post" name="textarea" rows="10" cols="50" placeholder="INWZA007 คุณต้องการขายอะไร ?"></textarea>
               </div>
             </div>
+
             <div class="separator">
             </div>
+
+            <!-- Category Selector -->
             <div class="bottom_new_post">
+              <div class="new_post_field" id="category-area">
+                <h6>ประเภท</h6>
+                <select name="category" id="category" required>
+            								<option value="0" disabled selected="selected">เลือกหมวดหมู่</option>
+                            <option value="1">Photo Set</option>
+
+                            <option value="11">CD</option>
+
+                            <option value="25">แท่งไฟ</option>
+
+                    </select>
+
+              </div>
+
+              <div id="set_area_category" style="display:none;">
+                <h6>เซต</h6>
+                <select name="set" id="category_set">
+                    </select>
+              </div>
+
+
+
+              <div id="main_category_type" style="display:none;">
+                <h6>เซตย่อย</h6>
+                <ul class="category_type"></ul>
+              </div>
+
+              <div id="member_category" class="new_post_field">
+                <h6>สมาชิก BNK48</h6>
+                <select>
+                  <optgroup label="Gen 1">
+                    <option value="cherpang">Cherpang</option>
+                    <option value="orn">Orn</option>
+                  </optgroup>
+                  <optgroup label="Gen 2">
+                    <option value="?">???</option>
+                    <option value="?">???</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <!-- End Selector -->
+
+              <!-- Price Field -->
+              <div class="clearfix"></div>
 
               <!-- Category Selector -->
-              <div class="new_post_field">
-              <h6>asdas</h6>
-              <input type="text" name="category" required></div>
-              <!-- Upload Button -->
-              <a href="#">
-                <div class="btn_upload_images white-button ">
-                  <span><i class="far fa-image"></i> เพิ่มรูปภาพ</span>
-                </div>
-              </a>
+              <div id="price_field" class="new_post_field">
+                <h6>ราคา</h6>
+                <input type="text" name="category" required>
+              </div>
 
+              <!-- End Price Field -->
+              <div class="clearfix"></div>
+              <div class="separator">
+              </div>
+
+              <div class="clearfix"></div>
+              <!-- Category Selector -->
+              <div class="new_post_field">
+                <h6>สถานที่นัดรับ</h6>
+                <input type="text" name="category" required>
+              </div>
+
+              <div class="new_post_field">
+                <h6>ประเภทการส่งทางไกล</h6>
+                <input type="text" name="category" required>
+              </div>
+
+
+
+              <!-- Upload Button -->
+
+
+
+
+              <div class="clearfix"></div>
+              <div class=" fileContainer" style="margin:0;">
+                <input type="file" name="image-upload" id="image-upload" required/>
+                <label for="image-upload" class="white-button"><span><i class="far fa-image"></i> เพิ่มรูปภาพ</span></label>
+              </div>
+
+              <div class="clearfix"></div>
+
+              <div id="image-preview">
+                <div class="image-preview-hover">
+                  <button type="button" class="remove-image-privew"><i class="fas fa-times"></i></button>
+                </div>
+              </div>
+
+              <script type="text/javascript">
+                $(document).ready(function() {
+                  $.uploadPreview({
+                    input_field: "#image-upload", // Default: .image-upload
+                    preview_box: "#image-preview", // Default: .image-preview
+                    label_field: "#image-label", // Default: .image-label
+                    label_default: "Choose File", // Default: Choose File
+                    label_selected: "Change File", // Default: Change File
+                    no_label: false // Default: false
+                  });
+                });
+              </script>
+
+              <div class="clearfix"></div>
+              <div class="separator">
+              </div>
+
+              <div class="new_post_button">
+                <input type="submit" class="pink-button" value="สร้างโพสต์">
+              </div>
+
+              <div class="clearfix"></div>
             </div>
           </form>
         </div>
