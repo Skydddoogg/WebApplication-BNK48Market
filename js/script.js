@@ -16,6 +16,8 @@ $(document).ready(function() {
   $('.new_post').click(function() {
     $(".overlay").fadeIn(500);
     $(".new_post_field").show();
+    $(".new_post_button").show();
+    $('.bottom_new_post > .separator').show();
   });
 
   $(".overlay").not(".text").click(function() {
@@ -23,8 +25,16 @@ $(document).ready(function() {
     $(".new_post_field").hide();
     $('#set_area_category').hide();
     $('#main_category_type').hide();
+    $('.bottom_new_post > .separator').hide();
+    $(".new_post_button").hide();
   });
 
+  //Hidden New Post Field
+  $(".new_post_field").hide();
+  $(".new_post_button").hide();
+  $('.bottom_new_post > .separator').hide();
+
+  
   $('.text_area_new_post').keyup(function() {
     var text_length = $(this).val().length;
 
