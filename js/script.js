@@ -14,10 +14,18 @@ $(document).ready(function() {
 
 
   $('.new_post').click(function() {
+var filename = $('#image-upload').val();
+console.log(filename);
     $(".overlay").fadeIn(500);
     $(".new_post_field").show();
     $(".new_post_button").show();
     $('.bottom_new_post > .separator').show();
+
+    if (filename == "") {
+      $("#image-preview").hide()
+    }else{
+      $("#image-preview").show();
+    }
   });
 
   $(".overlay").not(".text").click(function() {
@@ -27,14 +35,15 @@ $(document).ready(function() {
     $('#main_category_type').hide();
     $('.bottom_new_post > .separator').hide();
     $(".new_post_button").hide();
+    $("#image-preview").hide();
   });
 
   //Hidden New Post Field
   $(".new_post_field").hide();
   $(".new_post_button").hide();
   $('.bottom_new_post > .separator').hide();
+  $("#image-preview").hide();
 
-  
   $('.text_area_new_post').keyup(function() {
     var text_length = $(this).val().length;
 
@@ -137,7 +146,7 @@ $(document).ready(function() {
   $('#category_set').change(updateCategoryType);
 
 
-  var filename = $('#image-upload').val();
+var filename = $('#image-upload').val();
   if (filename == "") {
     $("#image-preview").hide()
   }
