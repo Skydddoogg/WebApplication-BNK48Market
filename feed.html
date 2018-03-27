@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Login | BNK 48</title>
+  <title>Title | BNK 48</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- BOOTSRAP -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -26,7 +26,7 @@
 
 <body>
   <header>
-    <div class="container" style="width:1010px;">
+    <div class="container" style="width:1000px;">
       <div class="row">
         <div class="col">
           <div id="logo">
@@ -39,44 +39,48 @@
           </div>
         </div>
         <div class="col">
-          <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <div class="profile_icon" aria-expanded="false">
-              <img src="images/jennis.jpg" alt="">
+          <div class="profile_nav">
+            <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div class="profile_icon" aria-expanded="false">
+                <img src="images/jennis.jpg" alt="">
+              </div>
+            </a>
+            <div class="profile_dropdown dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <ul>
+                <li>
+                  <a href="">โปรไฟล์ส่วนตัว</a>
+
+                </li>
+
+                <li>
+                  <a href="">แก้ไขโปรไฟล์</a>
+                </li>
+
+                <li>
+                  <a href="">จัดการโพสต์</a>
+                </li>
+
+                <li>
+                  <a href="">ยืนยันตัวตน</a>
+                </li>
+
+              </ul>
             </div>
-          </a>
-
-
-          <div class="profile_dropdown dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <ul>
-              <li>
-                <a href="">โปรไฟล์ส่วนตัว</a>
-
-              </li>
-
-              <li>
-                <a href="">แก้ไขโปรไฟล์</a>
-              </li>
-
-              <li>
-                <a href="">จัดการโพสต์</a>
-              </li>
-
-              <li>
-                <a href="">ยืนยันตัวตน</a>
-              </li>
-
-            </ul>
           </div>
+
         </div>
       </div>
     </div>
   </header>
 
 
-  <div class="container" style="max-width:1010px;">
+  <div class="container" style="max-width:1000px;">
     <div class="row" style="margin-top:20px;">
       <div class="col-8">
         <div class="new_post">
+          <div class="alert alert-danger" role="alert">
+            <strong>ผิดพลาด!</strong> กรุณากรอกข้อมูลให้ครบถ้วน
+          </div>
           <form action="">
             <div class="top_new_post">
               <div class="new_post_icon">
@@ -122,7 +126,7 @@
 
               <div id="member_category" class="new_post_field">
                 <h6>สมาชิก BNK48</h6>
-                <select>
+                <select required>
                   <optgroup label="Gen 1">
                     <option value="cherpang">Cherpang</option>
                     <option value="orn">Orn</option>
@@ -159,7 +163,14 @@
 
               <div class="new_post_field">
                 <h6>ประเภทการส่งทางไกล</h6>
-                <input type="text" name="category" required>
+                <div class="deliverly_new_post">
+                <ul>
+                  <li><input id="delivery_new_post_id_1" type="checkbox" name="type" value="111">
+                    <label for="delivery_new_post_id_1">EMS</label></li>
+                  <li><input id="delivery_new_post_id_2" type="checkbox" name="type" value="111">
+                    <label for="delivery_new_post_id_2">KERRY</label></li>
+                </ul>
+              </div>
               </div>
 
 
@@ -208,9 +219,238 @@
             </div>
           </form>
         </div>
+
+        <div id="post">
+          <div class="header_post clearfix">
+            <div class="profile_post">
+              <div class="profile_icon_post">
+                <img src="images/jennis.jpg" alt="">
+              </div>
+
+              <div class="userdes_post">
+                <h6>INZAWA007 <span>1,000 Likes</span></h6>
+                <p class="date_time_posted">1 นาทีที่แล้ว</p>
+              </div>
+            </div>
+
+            <div class="price_of_post">
+              <h4>฿450,000 <span>/ ชิ้น</span></h4>
+              <div class="amount_of_product">
+                คงเหลือ 10 ชิ้น
+              </div>
+            </div>
+          </div>
+
+          <div class="post_type">
+            <div class="row" style="margin:0;">
+              <div class="col post_type_list">
+                <div class="header_type">
+                  ประเภท
+                </div>
+
+                <div class="sub_type">
+                  โฟโต้เซ็ต
+                </div>
+              </div>
+              <div class="col post_type_list">
+                <div class="header_type">
+                  เซต
+                </div>
+
+                <div class="sub_type">
+                  Set 8 (Koisuru Fortune Cookie คุกกี้เสี่ยงทาย)
+                </div>
+              </div>
+              <div class="col post_type_list">
+                <div class="header_type">
+                  เซตย่อย
+                </div>
+
+                <div class="sub_type">
+                  CLOSE UP
+                </div>
+              </div>
+              <div class="col post_type_list">
+                <div class="header_type">
+                  สมาชิก
+                </div>
+
+                <div class="sub_type">
+                  เฌอปราง
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="post_type">
+            <div class="row" style="margin:0;">
+              <div class="col post_type_list">
+                <div class="position_field">
+                  นัดรับ - Airport Link ลาดกระบัง
+                </div>
+              </div>
+              <div class="col post_type_list">
+                <div class="deliverly_field">
+                  ส่งทางไกล - EMS , KERRY , FEDEX
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="post_type">
+            <div class="row" style="margin:0;">
+              <div class="col post_type_list">
+                <div class="credit_field">
+                  ช่องทางชำระเงิน -
+                  <ul>
+                    <li>
+                      <img src="images/icon/bank/Visa-icon.png" alt="">
+                    </li>
+                    <li>
+                      <img src="images/icon/bank/Master-Card-icon.png" alt="">
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="description_post">
+            <p class="minimize">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content
+              content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
+          </div>
+
+          <div class="post_thumbnail">
+            <img src="https://pbs.twimg.com/media/DB2g6q_UAAI742W.jpg" alt="">
+          </div>
+
+          <div class="post_contact_button">
+            <div class="contact_icon">
+              <ul>
+                <li><a href="#"><img src="images/contact/facebook.svg" alt=""></a></li>
+                <li><a href="#"><img src="images/contact/line.svg" alt=""></a></li>
+                <li><a href="#"><img src="images/contact/twitter.svg" alt=""></a></li>
+              </ul>
+            </div>
+            <button class="contact_button">ติดต่อผู้ขาย</button>
+          </div>
+
+          <div class="clearfix"></div>
+        </div>
+
+
       </div>
-      <div class="col-4">
-        sidebars
+      <div class="col-4" style="padding-left:0px; height:1000vh;">
+        <div class="banner">
+          <img src="images/banner/banner.jpg" alt="">
+        </div>
+
+        <div id="filter">
+
+          <ul>
+            <li>
+              <div class="filter_header">
+                <h6>ประเภท</h6>
+              </div>
+              <div class="filter_sub">
+                <select name="category" id="filter_category" required="">
+            								<option value="0" disabled="" selected="selected">เลือกประเภท</option>
+                            <option value="1">Photo Set</option>
+
+                            <option value="11">CD</option>
+
+                            <option value="25">แท่งไฟ</option>
+
+                    </select>
+              </div>
+            </li>
+
+            <li>
+              <div id="filter_set_area_category" class="filter_header">
+                <div class="filter_header">
+                  <h6>เซต</h6>
+                </div>
+                <div class="filter_sub">
+                  <select name="category" id="filter_set_area_category_input" required="">
+                    </select>
+                </div>
+              </div>
+
+            </li>
+
+            <li>
+              <div id="filter_main_category_type" style="display:none;">
+                <div class="filter_header" style="margin-bottom:10px;">
+                  <h6>เซตย่อย</h6>
+                </div>
+                <div class="filter_sub">
+                  <ul class="filter_category_type"></ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div id="filter_member_category" class="filter_field" style="">
+                <div class="filter_header">
+                  <h6>สมาชิก BNK48</h6>
+                </div>
+                <div class="filter_sub">
+                  <select required="">
+                  <optgroup label="Gen 1">
+                    <option value="cherpang">Cherpang</option>
+                    <option value="orn">Orn</option>
+                  </optgroup>
+                  <optgroup label="Gen 2">
+                    <option value="?">???</option>
+                    <option value="?">???</option>
+                  </optgroup>
+                </select>
+                </div>
+              </div>
+            </li>
+
+            <div class="separator">
+
+            </div>
+
+            <li>
+              <div class="filter_header" style="margin-bottom:10px;">
+                <h6>รูปแบบการส่ง</h6>
+              </div>
+              <div class="filter_sub">
+                <ul>
+                  <li><input id="delivery_id_1" type="checkbox" name="type" value="111">
+                    <label for="delivery_id_1">นัดรับ</label></li>
+                  <li><input id="delivery_id_2" type="checkbox" name="type" value="111">
+                    <label for="delivery_id_2">ส่งทางไกล</label></li>
+                </ul>
+              </div>
+            </li>
+
+            <div class="separator">
+
+            </div>
+
+            <li>
+              <div id="filter_member_category" class="filter_field" style="">
+                <div class="filter_header">
+                  <h6>เรียงตาม</h6>
+                </div>
+                <div class="filter_sub">
+                  <select required="">
+                  <optgroup label="ราคา">
+                    <option value="?">ราคา น้อย - มาก</option>
+                    <option value="?">ราคา มาก - น้อย</option>
+                  </optgroup>
+                  <optgroup label="ไลค์">
+                    <option value="?">ไลค์ น้อย - มาก</option>
+                    <option value="?">ไลค์ มาก - น้อย</option>
+                  </optgroup>
+                </select>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+        </div>
       </div>
     </div>
   </div>
