@@ -451,6 +451,25 @@
           </ul>
 
         </div>
+
+        <script type="text/javascript">
+            var filterDiv = $("#filter").offset().top;
+            $(window).scroll(function() {
+              if ($(window).scrollTop() > filterDiv + 10) {
+                $('#filter').css({
+                  'position': 'fixed',
+                  'top': '10px',
+                  'z-index': '1',
+                  'width': '318px'
+                });
+              } else {
+                $('#filter').css({
+                  'position': 'relative',
+                  'top': 'auto'
+                });
+              }
+            });
+        </script>
       </div>
     </div>
   </div>

@@ -265,31 +265,7 @@ $(document).ready(function() {
 
   //Scroll
   // console.log($("div#post").length);
-  var filterDiv = $("#filter").offset().top;
-  $(window).scroll(function() {
-    //       // console.log($("div#post").length);
-    //       var n = 0;
-    //       if ($(window).scrollTop() > $("div#post").eq(n).offset().top){
-    //         console.log(n);
-    //       }else{
-    //         n++;
-    //       }
-    if ($(window).scrollTop() > filterDiv + 10) {
-      $('#filter').css({
-        'position': 'fixed',
-        'top': '10px',
-        'z-index': '1',
-        'width': '318px'
-      });
-    } else {
-      $('#filter').css({
-        'position': 'relative',
-        'top': 'auto'
-      });
 
-      console.log("1");
-    }
-  });
 
   $(".contact_button").click(function(){
     $(".contact_icon").fadeToggle();
@@ -297,5 +273,30 @@ $(document).ready(function() {
 //     $(this).delay(100 * i).fadeIn(500);
 // });
   });
+  var like = parseInt($(".like span").text());
+  var dislike = parseInt($(".dislike span").text());
 
+  function kFormatter(num) {
+    if(num >= 1000 && num <= 999999){
+      return num >= 1000 ? (num/1000).toFixed(1) + 'K' : num
+    }else if(num >= 1000000){
+      return num >= 1000000 ? (num/1000000).toFixed(1) + 'M' : num
+    }
+
+  }
+
+  $(".like span").text(kFormatter(like));
+  $(".dislike span").text(kFormatter(dislike));
+
+  function likeTab(like , dislike){
+console.log("Like = " + like + " Dislike = " + dislike);
+console.log((like+dislike));
+    var sumLikeDislike = like + dislike;
+    var likeTabWidth = (like/sumLikeDislike)*100;
+    return  parseInt(likeTabWidth);
+  }
+
+  $(".like_tab").css({
+    'width': likeTab(like, dislike)+'%',
+  });
 });
