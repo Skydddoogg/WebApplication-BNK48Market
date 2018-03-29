@@ -20,8 +20,9 @@
   <!-- Privew Image Upload -->
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
-  <script type="text/javascript" src="js/jquery.uploadPreview.js"></script>
-  <script type="text/javascript" src="js/jquery.uploadPreview.min.js"></script>
+
+  <!-- Fancybox -->
+
 </head>
 
 <body>
@@ -30,7 +31,9 @@
       <div class="row">
         <div class="col">
           <div id="logo">
+            <a href="feed.html">
             <h2>MARKET48</h2>
+            </a>
           </div>
         </div>
         <div class="col">
@@ -164,45 +167,37 @@
               <div class="new_post_field">
                 <h6>ประเภทการส่งทางไกล</h6>
                 <div class="deliverly_new_post">
-                <ul>
-                  <li><input id="delivery_new_post_id_1" type="checkbox" name="type" value="111">
-                    <label for="delivery_new_post_id_1">EMS</label></li>
-                  <li><input id="delivery_new_post_id_2" type="checkbox" name="type" value="111">
-                    <label for="delivery_new_post_id_2">KERRY</label></li>
-                </ul>
-              </div>
-              </div>
-
-
-
-              <!-- Upload Button -->
-
-
-
-
-              <div class="clearfix"></div>
-              <div class=" fileContainer" style="margin:0;">
-                <input type="file" name="image-upload" id="image-upload" required/>
-                <label for="image-upload" class="white-button"><span><i class="far fa-image"></i> เพิ่มรูปภาพ</span></label>
-              </div>
-
-              <div class="clearfix"></div>
-
-              <div id="image-preview">
-                <div class="image-preview-hover">
-                  <button type="button" class="remove-image-privew"><i class="fas fa-times"></i></button>
+                  <ul>
+                    <li><input id="delivery_new_id_1" type="checkbox" name="type" value="111">
+                      <label for="delivery_new_id_1">EMS</label></li>
+                    <li><input id="delivery_new_id_2" type="checkbox" name="type" value="111">
+                      <label for="delivery_new_id_2">KERRY</label></li>
+                  </ul>
                 </div>
               </div>
 
+              <div class="clearfix"></div>
+
+              <!-- UPLOAD IMAGE -->
+              <div class="" id="upload_image">
+                <div class=" fileContainer" style="margin:0;">
+                  <input type="file" name="imageUpload-1" id="imageUpload-1" class="image-upload" required="">
+                  <label for="imageUpload-1" class="white-button"><span><i class="far fa-image"></i> เพิ่มรูปภาพ</span></label>
+                </div>
+
+
+                <div id="imageUpload-1-preview" class="image-preview">
+                  <div class="image-preview-hover">
+                    <button type="button" class="remove-image-privew"><i class="fas fa-times"></i></button>
+                  </div>
+                </div>
+              </div>
+              <!-- END UPLOAD IMAGE -->
+
               <script type="text/javascript">
                 $(document).ready(function() {
-                  $.uploadPreview({
-                    input_field: "#image-upload", // Default: .image-upload
-                    preview_box: "#image-preview", // Default: .image-preview
-                    label_field: "#image-label", // Default: .image-label
-                    label_default: "Choose File", // Default: Choose File
-                    label_selected: "Change File", // Default: Change File
-                    no_label: false // Default: false
+                  $("#imageUpload-1").change(function() {
+                    $.readURL(this);
                   });
                 });
               </script>
@@ -220,8 +215,10 @@
           </form>
         </div>
 
-        <div id="post">
-          <div class="header_post clearfix">
+          <!-- post-id ให้ใส่เลข ID ของ Post -->
+
+        <div id="post" class="post">
+          <div class="header_post clearfix post_id_1">
             <div class="profile_post">
               <div class="profile_icon_post">
                 <img src="images/jennis.jpg" alt="">
@@ -324,22 +321,151 @@
           </div>
 
           <div class="post_contact_button">
-            <div class="contact_icon">
+            <div id="post_id_1_contact" class="contact_icon">
               <ul>
                 <li><a href="#"><img src="images/contact/facebook.svg" alt=""></a></li>
                 <li><a href="#"><img src="images/contact/line.svg" alt=""></a></li>
                 <li><a href="#"><img src="images/contact/twitter.svg" alt=""></a></li>
               </ul>
             </div>
-            <button class="contact_button">ติดต่อผู้ขาย</button>
+            <button post-id="1" class="contact_button">ติดต่อผู้ขาย</button>
           </div>
 
           <div class="clearfix"></div>
         </div>
 
 
+        <div id="post" class="post">
+          <div class="header_post clearfix">
+            <div class="profile_post">
+              <div class="profile_icon_post">
+                <img src="images/jennis.jpg" alt="">
+              </div>
+
+              <div class="userdes_post">
+                <h6>INZAWA007 <span>1,000 Likes</span></h6>
+                <p class="date_time_posted">1 นาทีที่แล้ว</p>
+              </div>
+            </div>
+
+            <div class="price_of_post">
+              <h4>฿450,000 <span>/ ชิ้น</span></h4>
+              <div class="amount_of_product">
+                คงเหลือ 10 ชิ้น
+              </div>
+            </div>
+          </div>
+
+          <div class="post_type">
+            <div class="row" style="margin:0;">
+              <div class="col post_type_list">
+                <div class="header_type">
+                  ประเภท
+                </div>
+
+                <div class="sub_type">
+                  โฟโต้เซ็ต
+                </div>
+              </div>
+              <div class="col post_type_list">
+                <div class="header_type">
+                  เซต
+                </div>
+
+                <div class="sub_type">
+                  Set 8 (Koisuru Fortune Cookie คุกกี้เสี่ยงทาย)
+                </div>
+              </div>
+              <div class="col post_type_list">
+                <div class="header_type">
+                  เซตย่อย
+                </div>
+
+                <div class="sub_type">
+                  CLOSE UP
+                </div>
+              </div>
+              <div class="col post_type_list">
+                <div class="header_type">
+                  สมาชิก
+                </div>
+
+                <div class="sub_type">
+                  เฌอปราง
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="post_type">
+            <div class="row" style="margin:0;">
+              <div class="col post_type_list">
+                <div class="position_field">
+                  นัดรับ - Airport Link ลาดกระบัง
+                </div>
+              </div>
+              <div class="col post_type_list">
+                <div class="deliverly_field">
+                  ส่งทางไกล - EMS , KERRY , FEDEX
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="post_type">
+            <div class="row" style="margin:0;">
+              <div class="col post_type_list">
+                <div class="credit_field">
+                  ช่องทางชำระเงิน -
+                  <ul>
+                    <li>
+                      <img src="images/icon/bank/Visa-icon.png" alt="">
+                    </li>
+                    <li>
+                      <img src="images/icon/bank/Master-Card-icon.png" alt="">
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="description_post">
+            <p class="minimize">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distrib<span> </span><br><a href="#" class="more">ดูเพิ่มเติม</a><span style="display:none;">n looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content
+              content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text. <br><a href="#" class="less">แสดงน้อยลง</a></span></p>
+          </div>
+
+          <div class="post_thumbnail">
+            <img src="https://scontent.fbkk18-1.fna.fbcdn.net/v/t1.0-9/29542515_1798217496896540_7557036586806951284_n.jpg?_nc_cat=0&oh=a25d7c8303a7d5a3ced6c88da3992321&oe=5B2AD3DB" alt="">
+          </div>
+
+
+
+          <div class="post_contact_button">
+            <div id="post_id_2_contact" class="contact_icon">
+              <ul>
+                <li><a href="#"><img src="images/contact/facebook.svg" alt=""></a></li>
+                <li><a href="#"><img src="images/contact/line.svg" alt=""></a></li>
+                <li><a href="#"><img src="images/contact/twitter.svg" alt=""></a></li>
+              </ul>
+            </div>
+            <button post-id="2" class="contact_button">ติดต่อผู้ขาย</button>
+          </div>
+
+          <div class="clearfix"></div>
+        </div>
+
+
+
+
+
+        <div class="post_thumbnail_popup">
+          <img src="" alt="">
+        </div>
+
+          <button type="button" class="exit_thumbnail_popup"><i class="fas fa-times"></i></button>
+        
       </div>
-      <div class="col-4" style="padding-left:0px; height:1000vh;">
+      <div class="col-4" style="padding-left:0px;">
         <div class="banner">
           <img src="images/banner/banner.jpg" alt="">
         </div>
@@ -453,22 +579,22 @@
         </div>
 
         <script type="text/javascript">
-            var filterDiv = $("#filter").offset().top;
-            $(window).scroll(function() {
-              if ($(window).scrollTop() > filterDiv + 10) {
-                $('#filter').css({
-                  'position': 'fixed',
-                  'top': '10px',
-                  'z-index': '1',
-                  'width': '318px'
-                });
-              } else {
-                $('#filter').css({
-                  'position': 'relative',
-                  'top': 'auto'
-                });
-              }
-            });
+          var filterDiv = $("#filter").offset().top;
+          $(window).scroll(function() {
+            if ($(window).scrollTop() > filterDiv + 10) {
+              $('#filter').css({
+                'position': 'fixed',
+                'top': '10px',
+                'z-index': '1',
+                'width': '318px'
+              });
+            } else {
+              $('#filter').css({
+                'position': 'relative',
+                'top': 'auto'
+              });
+            }
+          });
         </script>
       </div>
     </div>

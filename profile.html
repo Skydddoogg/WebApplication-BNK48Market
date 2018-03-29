@@ -20,17 +20,17 @@
   <!-- Privew Image Upload -->
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
-  <script type="text/javascript" src="js/jquery.uploadPreview.js"></script>
-  <script type="text/javascript" src="js/jquery.uploadPreview.min.js"></script>
 </head>
 
 <body>
   <header>
-    <div class="container" style="width:1000px;">
+    <div class="container" style="max-width:1000px;">
       <div class="row">
         <div class="col">
           <div id="logo">
+            <a href="feed.html">
             <h2>MARKET48</h2>
+            </a>
           </div>
         </div>
         <div class="col">
@@ -42,7 +42,7 @@
           <div class="profile_nav">
             <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <div class="profile_icon" aria-expanded="false">
-                <img src="images/jennis.jpg" alt="">
+                <img src="images/sdrtr.jpg" alt="">
               </div>
             </a>
             <div class="profile_dropdown dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -74,17 +74,35 @@
   </header>
 
 
-  <div class="container" style="max-width:1010px;">
+  <div class="container" style="max-width:1000px;">
     <div class="row" style="margin-top:20px;">
-      <div class="col-3">
-        menu
+      <div class="col-3 side_bar_menu">
+        <ul>
+          <li>
+            <a href="profile.html" class="side_bar_menu_active">โปรไฟล์ส่วนตัว</a>
+
+          </li>
+
+          <li>
+            <a href="edit-profile.html">แก้ไขโปรไฟล์</a>
+          </li>
+
+          <li>
+            <a href="manage-salepost.html">จัดการโพสต์</a>
+          </li>
+
+          <li>
+            <a href="account-identification.html"=>ยืนยันตัวตน</a>
+          </li>
+
+        </ul>
       </div>
-      <div class="col-9" style="padding-left:0px; height:1000vh;">
+      <div class="col-9" style="padding-left:0px;">
         <div class="" id="body">
           <div class="row profile_header">
             <div class="col">
               <div class="row">
-                <div class="col" style="display:flex;">
+                <div class="col-9">
                   <div class="profile_image">
                     <img src="images/sdrtr.jpg" alt="">
                   </div>
@@ -92,7 +110,7 @@
                     <ul>
                       <li>
                         <h6>INWZA007</h6>
-                        <div class="verify-icon"></div>
+                        <div class="verify-icon" aria-label="ยืนยันตัวตนแล้ว"><i class="far fa-check-circle"></i></div>
                       </li>
                       <li>
                         <div class="contact_icon" style="display: block;">
@@ -109,13 +127,13 @@
               </div>
             </div>
 
-            <div class="col">
+            <div class="col-3">
               <div class="like_dislike">
                 <div class="like-button">
-                  <div class="like" alt="1100000">
-                    <span>10000</span>
+                  <div class="like" aria-label="8500">
+                    <span>8500</span>
                   </div>
-                  <div class="dislike">
+                  <div class="dislike" aria-label="2500">
                     <span>2500</span>
                   </div>
                 </div>
@@ -160,11 +178,11 @@
                 </div>
               </div>
               <div class="col post_type_list">
-                  <div class="credit_field">
-                    <div class="header_type">
-                      สมาชิก
-                    </div>
-<div class="sub_type">
+                <div class="credit_field_profile">
+                  <div class="header_type credit_field">
+                    สมาชิก
+                  </div>
+                  <div class="sub_type credit_field_sub">
                     <ul>
                       <li>
                         <img src="images/icon/bank/Visa-icon.png" alt="">
@@ -177,10 +195,111 @@
                 </div>
               </div>
             </div>
+
+
+
+
+          </div>
+
+          <div id="comment">
+            <form action="">
+            <div class="row">
+              <div class="col">
+                <div class="comment_header">
+                  <h6>
+                  ความคิดเห็น 4,800 รายการ
+                </h6>
+                </div>
+              </div>
+
+
+            </div>
+            <div class="row">
+              <div class="col-1">
+                <div class="commnet_profile_img">
+                  <img src="images/jennis.jpg" alt="">
+                </div>
+              </div>
+              <div class="col-11">
+                <div class="comment_field">
+                  <textarea class="text_area_new_post" name="textarea" rows="10" cols="50" placeholder="INWZA007 คุณต้องการขายอะไร ?" style="height: 44px; overflow-y: hidden;" required></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="comment_button col">
+                <ul>
+                  <li>
+                    <input type="submit" value="COMMENT" class="pink-button send_comment_button"></li>
+                  <li> <input type="submit" value="CANCEL" class="cancel_comment_button">
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+            </form>
+
+            <div class="row">
+              <div class="col sub_comment">
+                <ul>
+                  <li>
+                    <div class="row">
+                      <div class="col-1">
+                        <div class="commnet_profile_img" style="margin-top:15px;">
+                          <img src="images/jennis.jpg" alt="">
+                        </div>
+                      </div>
+                      <div class="col-11">
+                        <div class="sub_comment_description">
+                          <h6>INWZA007 <span>โพสเมื่อ 20 นาทีที่แล้ว</span></h6>
+                          <div>sdsadsadsakdaskdoaksodkao</div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+
+                  <li>
+                    <div class="row">
+                      <div class="col-1">
+                        <div class="commnet_profile_img" style="margin-top:15px;">
+                          <img src="images/jennis.jpg" alt="">
+                        </div>
+                      </div>
+                      <div class="col-11">
+                        <div class="sub_comment_description">
+                          <h6>INWZA007 <span>โพสเมื่อ 20 นาทีที่แล้ว</span></h6>
+                          <div>sdsadsadsakdaskdoaksodkao</div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+
+                  <li>
+                    <div class="row">
+                      <div class="col-1">
+                        <div class="commnet_profile_img" style="margin-top:15px;">
+                          <img src="images/jennis.jpg" alt="">
+                        </div>
+                      </div>
+                      <div class="col-11">
+                        <div class="sub_comment_description">
+                          <h6>INWZA007 <span>โพสเมื่อ 20 นาทีที่แล้ว</span></h6>
+                          <div>sdsadsadsakdaskdoaksodkao</div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
   </div>
 
