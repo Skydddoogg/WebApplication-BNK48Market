@@ -352,9 +352,9 @@ $(document).ready(function() {
         reader.readAsDataURL(input.files[0]);
     }
 
-}
+    }
 
-});
+    });
 
 $(".image-preview").hide();
 

@@ -14,6 +14,11 @@ button{
   height: 100%;
 }
 
+#logo a{
+  color: #d787df;
+  text-decoration: none;
+}
+
 #logo h2 {
   display: table-cell;
   vertical-align: middle;
@@ -1415,4 +1420,14 @@ margin-right: 10px;
 
 .exit_thumbnail_popup:hover{
       color: #fff;
+}
+
+.identification_field{
+  margin: auto;
+  width: 200px;
+}
+
+
+.identification_field input{
+  width: 200px;
 }
