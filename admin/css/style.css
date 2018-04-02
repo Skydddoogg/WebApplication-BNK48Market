@@ -1574,6 +1574,7 @@ textarea {
 }
 .sidebar-nav ul li {
   list-style: none;
+  word-wrap: break-word;
 }
 .sidebar-nav ul li a {
   color: #607d8b;
@@ -1581,12 +1582,13 @@ textarea {
   display: block;
   font-size: 14px;
   white-space: nowrap;
+      font-family: 'Kanit', sans-serif;
 }
 .sidebar-nav ul li a:hover {
-  color: #1976d2;
+  color: #d787df ;
 }
 .sidebar-nav ul li a:hover i {
-  color: #1976d2;
+  color: #d787df ;
 }
 .sidebar-nav ul li a.active {
   color: #1976d2;
@@ -1641,12 +1643,12 @@ textarea {
   color: #1976d2;
 }
 .sidebar-nav > ul > li.active > a {
-  color: #1976d2;
+  color: #d787df;
   font-weight: 500;
   border-left: 3px solid #fff;
 }
 .sidebar-nav > ul > li.active > a i {
-  color: #1976d2;
+  color: #d787df;
 }
 .sidebar-nav .has-arrow {
   position: relative;
@@ -1930,6 +1932,8 @@ textarea {
 .page-titles h3 {
   margin-bottom: 0;
   margin-top: 0;
+  font-family: 'Kanit', sans-serif;
+  color: #d787df !important;
 }
 .page-titles .breadcrumb {
   padding: 0;
