@@ -14,7 +14,8 @@
   <!-- Awsome ICON -->
   <link rel="stylesheet" href="css/fontawesome-all.css">
   <!-- Script -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
   <!-- Ajax -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- Privew Image Upload -->
@@ -32,7 +33,7 @@
         <div class="col">
           <div id="logo">
             <a href="feed.html">
-            <h2>MARKET48</h2>
+              <h2>MARKET48</h2>
             </a>
           </div>
         </div>
@@ -64,6 +65,10 @@
                 </li>
 
                 <li>
+                    <a href="">โพสที่บันทึกไว้</a>
+                  </li>
+
+                <li>
                   <a href="">ยืนยันตัวตน</a>
                 </li>
 
@@ -77,7 +82,7 @@
   </header>
 
 
-  <div class="container" style="max-width:1000px;">
+  <div class="container bodyContainer" style="max-width:1000px;cart_icon">
     <div class="row" style="margin-top:20px;">
       <div class="col-8">
         <div class="new_post">
@@ -103,21 +108,21 @@
               <div class="new_post_field" id="category-area">
                 <h6>ประเภท</h6>
                 <select name="category" id="category" required>
-            								<option value="0" disabled selected="selected">เลือกหมวดหมู่</option>
-                            <option value="1">Photo Set</option>
+                  <option value="0" disabled selected="selected">เลือกหมวดหมู่</option>
+                  <option value="1">Photo Set</option>
 
-                            <option value="11">CD</option>
+                  <option value="11">CD</option>
 
-                            <option value="25">แท่งไฟ</option>
+                  <option value="25">แท่งไฟ</option>
 
-                    </select>
+                </select>
 
               </div>
 
               <div id="set_area_category" style="display:none;">
                 <h6>เซต</h6>
                 <select name="set" id="category_set">
-                    </select>
+                </select>
               </div>
 
 
@@ -168,10 +173,14 @@
                 <h6>ประเภทการส่งทางไกล</h6>
                 <div class="deliverly_new_post">
                   <ul>
-                    <li><input id="delivery_new_id_1" type="checkbox" name="type" value="111">
-                      <label for="delivery_new_id_1">EMS</label></li>
-                    <li><input id="delivery_new_id_2" type="checkbox" name="type" value="111">
-                      <label for="delivery_new_id_2">KERRY</label></li>
+                    <li>
+                      <input id="delivery_new_id_1" type="checkbox" name="type" value="111">
+                      <label for="delivery_new_id_1">EMS</label>
+                    </li>
+                    <li>
+                      <input id="delivery_new_id_2" type="checkbox" name="type" value="111">
+                      <label for="delivery_new_id_2">KERRY</label>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -182,21 +191,26 @@
               <div class="" id="upload_image">
                 <div class=" fileContainer" style="margin:0;">
                   <input type="file" name="imageUpload-1" id="imageUpload-1" class="image-upload" required="">
-                  <label for="imageUpload-1" class="white-button"><span><i class="far fa-image"></i> เพิ่มรูปภาพ</span></label>
+                  <label for="imageUpload-1" class="white-button">
+                    <span>
+                      <i class="far fa-image"></i> เพิ่มรูปภาพ</span>
+                  </label>
                 </div>
 
 
                 <div id="imageUpload-1-preview" class="image-preview">
                   <div class="image-preview-hover">
-                    <button type="button" class="remove-image-privew"><i class="fas fa-times"></i></button>
+                    <button type="button" class="remove-image-privew">
+                      <i class="fas fa-times"></i>
+                    </button>
                   </div>
                 </div>
               </div>
               <!-- END UPLOAD IMAGE -->
 
               <script type="text/javascript">
-                $(document).ready(function() {
-                  $("#imageUpload-1").change(function() {
+                $(document).ready(function () {
+                  $("#imageUpload-1").change(function () {
                     $.readURL(this);
                   });
                 });
@@ -215,7 +229,7 @@
           </form>
         </div>
 
-          <!-- post-id ให้ใส่เลข ID ของ Post -->
+        <!-- post-id ให้ใส่เลข ID ของ Post -->
 
         <div id="post" class="post">
           <div class="header_post clearfix post_id_1">
@@ -225,13 +239,17 @@
               </div>
 
               <div class="userdes_post">
-                <h6>INZAWA007 <span>1,000 Likes</span></h6>
+                <h6>INZAWA007
+                  <span>1,000 Likes</span>
+                </h6>
                 <p class="date_time_posted">1 นาทีที่แล้ว</p>
               </div>
             </div>
 
             <div class="price_of_post">
-              <h4>฿450,000 <span>/ ชิ้น</span></h4>
+              <h4>฿450,000
+                <span>/ ชิ้น</span>
+              </h4>
               <div class="amount_of_product">
                 คงเหลือ 10 ชิ้น
               </div>
@@ -312,8 +330,10 @@
             </div>
           </div>
           <div class="description_post">
-            <p class="minimize">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content
-              content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
+            <p class="minimize">It is a long established fact that a reader will be distracted by the readable content of a page when looking
+              at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
+              as opposed to using 'Content content here', making it look like readable English. Many desktop publishing packages
+              and web page editors now use Lorem Ipsum as their default model text.</p>
           </div>
 
           <div class="post_thumbnail">
@@ -323,9 +343,27 @@
           <div class="post_contact_button">
             <div id="post_id_1_contact" class="contact_icon">
               <ul>
-                <li><a href="#"><img src="images/contact/facebook.svg" alt=""></a></li>
-                <li><a href="#"><img src="images/contact/line.svg" alt=""></a></li>
-                <li><a href="#"><img src="images/contact/twitter.svg" alt=""></a></li>
+                <li>
+                  <a href="#">
+                    <img src="images/contact/facebook.svg" alt="">
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="images/contact/line.svg" alt="">
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="images/contact/twitter.svg" alt="">
+                  </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <img src="images/contact/email.svg" alt="">
+                    </a>
+                  </li>
               </ul>
             </div>
             <button post-id="1" class="contact_button">ติดต่อผู้ขาย</button>
@@ -343,13 +381,17 @@
               </div>
 
               <div class="userdes_post">
-                <h6>INZAWA007 <span>1,000 Likes</span></h6>
+                <h6>INZAWA007
+                  <span>1,000 Likes</span>
+                </h6>
                 <p class="date_time_posted">1 นาทีที่แล้ว</p>
               </div>
             </div>
 
             <div class="price_of_post">
-              <h4>฿450,000 <span>/ ชิ้น</span></h4>
+              <h4>฿450,000
+                <span>/ ชิ้น</span>
+              </h4>
               <div class="amount_of_product">
                 คงเหลือ 10 ชิ้น
               </div>
@@ -430,8 +472,18 @@
             </div>
           </div>
           <div class="description_post">
-            <p class="minimize">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distrib<span> </span><br><a href="#" class="more">ดูเพิ่มเติม</a><span style="display:none;">n looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content
-              content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text. <br><a href="#" class="less">แสดงน้อยลง</a></span></p>
+            <p class="minimize">It is a long established fact that a reader will be distracted by the readable content of a page when looking
+              at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distrib
+              <span> </span>
+              <br>
+              <a href="#" class="more">ดูเพิ่มเติม</a>
+              <span style="display:none;">n looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+                letters, as opposed to using 'Content content here', making it look like readable English. Many desktop publishing
+                packages and web page editors now use Lorem Ipsum as their default model text.
+                <br>
+                <a href="#" class="less">แสดงน้อยลง</a>
+              </span>
+            </p>
           </div>
 
           <div class="post_thumbnail">
@@ -443,9 +495,26 @@
           <div class="post_contact_button">
             <div id="post_id_2_contact" class="contact_icon">
               <ul>
-                <li><a href="#"><img src="images/contact/facebook.svg" alt=""></a></li>
-                <li><a href="#"><img src="images/contact/line.svg" alt=""></a></li>
-                <li><a href="#"><img src="images/contact/twitter.svg" alt=""></a></li>
+                <li>
+                  <a href="#">
+                    <img src="images/contact/facebook.svg" alt="">
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="images/contact/line.svg" alt="">
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="images/contact/twitter.svg" alt="">
+                  </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/contact/email.svg" alt="">
+                    </a>
+                  </li>
               </ul>
             </div>
             <button post-id="2" class="contact_button">ติดต่อผู้ขาย</button>
@@ -462,7 +531,9 @@
           <img src="" alt="">
         </div>
 
-          <button type="button" class="exit_thumbnail_popup"><i class="fas fa-times"></i></button>
+        <button type="button" class="exit_thumbnail_popup">
+          <i class="fas fa-times"></i>
+        </button>
 
       </div>
       <div class="col-4" style="padding-left:0px;">
@@ -479,14 +550,14 @@
               </div>
               <div class="filter_sub">
                 <select name="category" id="filter_category" required="">
-            								<option value="0" disabled="" selected="selected">เลือกประเภท</option>
-                            <option value="1">Photo Set</option>
+                  <option value="0" disabled="" selected="selected">เลือกประเภท</option>
+                  <option value="1">Photo Set</option>
 
-                            <option value="11">CD</option>
+                  <option value="11">CD</option>
 
-                            <option value="25">แท่งไฟ</option>
+                  <option value="25">แท่งไฟ</option>
 
-                    </select>
+                </select>
               </div>
             </li>
 
@@ -497,7 +568,7 @@
                 </div>
                 <div class="filter_sub">
                   <select name="category" id="filter_set_area_category_input" required="">
-                    </select>
+                  </select>
                 </div>
               </div>
 
@@ -520,15 +591,15 @@
                 </div>
                 <div class="filter_sub">
                   <select required="">
-                  <optgroup label="Gen 1">
-                    <option value="cherpang">Cherpang</option>
-                    <option value="orn">Orn</option>
-                  </optgroup>
-                  <optgroup label="Gen 2">
-                    <option value="?">???</option>
-                    <option value="?">???</option>
-                  </optgroup>
-                </select>
+                    <optgroup label="Gen 1">
+                      <option value="cherpang">Cherpang</option>
+                      <option value="orn">Orn</option>
+                    </optgroup>
+                    <optgroup label="Gen 2">
+                      <option value="?">???</option>
+                      <option value="?">???</option>
+                    </optgroup>
+                  </select>
                 </div>
               </div>
             </li>
@@ -543,10 +614,14 @@
               </div>
               <div class="filter_sub">
                 <ul>
-                  <li><input id="delivery_id_1" type="checkbox" name="type" value="111">
-                    <label for="delivery_id_1">นัดรับ</label></li>
-                  <li><input id="delivery_id_2" type="checkbox" name="type" value="111">
-                    <label for="delivery_id_2">ส่งทางไกล</label></li>
+                  <li>
+                    <input id="delivery_id_1" type="checkbox" name="type" value="111">
+                    <label for="delivery_id_1">นัดรับ</label>
+                  </li>
+                  <li>
+                    <input id="delivery_id_2" type="checkbox" name="type" value="111">
+                    <label for="delivery_id_2">ส่งทางไกล</label>
+                  </li>
                 </ul>
               </div>
             </li>
@@ -562,15 +637,15 @@
                 </div>
                 <div class="filter_sub">
                   <select required="">
-                  <optgroup label="ราคา">
-                    <option value="?">ราคา น้อย - มาก</option>
-                    <option value="?">ราคา มาก - น้อย</option>
-                  </optgroup>
-                  <optgroup label="ไลค์">
-                    <option value="?">ไลค์ น้อย - มาก</option>
-                    <option value="?">ไลค์ มาก - น้อย</option>
-                  </optgroup>
-                </select>
+                    <optgroup label="ราคา">
+                      <option value="?">ราคา น้อย - มาก</option>
+                      <option value="?">ราคา มาก - น้อย</option>
+                    </optgroup>
+                    <optgroup label="ไลค์">
+                      <option value="?">ไลค์ น้อย - มาก</option>
+                      <option value="?">ไลค์ มาก - น้อย</option>
+                    </optgroup>
+                  </select>
                 </div>
               </div>
             </li>
@@ -580,11 +655,11 @@
 
         <script type="text/javascript">
           var filterDiv = $("#filter").offset().top;
-          $(window).scroll(function() {
-            if ($(window).scrollTop() > filterDiv + 10) {
+          $(window).scroll(function () {
+            if ($(window).scrollTop() > filterDiv -80) {
               $('#filter').css({
                 'position': 'fixed',
-                'top': '10px',
+                'top': '80px',
                 'z-index': '1',
                 'width': '318px'
               });
@@ -594,6 +669,7 @@
                 'top': 'auto'
               });
             }
+            
           });
         </script>
       </div>

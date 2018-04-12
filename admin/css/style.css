@@ -7143,3 +7143,84 @@ background-repeat: no-repeat;
 .image-preview-hover:hover>.remove-image-privew {
   visibility: visible;
 }
+
+#login{
+  background-color: #f7f7f7;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:0;
+  left:0;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-size: cover;
+  background-color: #fff0f0;
+  /* background-image: url(https://brandinside.asia/wp-content/uploads/2018/02/23843634_1359593414167913_1265810095015956112_n-e1519146981803.jpg);  */
+}
+
+
+.loginInner{
+  width: 350px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top:8%;
+}
+
+.loginInner > .card{
+  width: 100%;
+  padding:30px 20px 20px 20px;
+  border:1px solid #e7e7e7;
+}
+.loginInner > input{
+  background-color: #fbfbfb;
+}
+
+
+.logoLogin{
+  margin-bottom: 20px;
+}
+
+.logoLogin h1{
+  color:#c58ec3;
+  font-size:3em;
+  font-style: italic;
+}
+
+.button_login{
+  background-color: #d787df;
+  border:1px solid #d787df;
+  width:100%;
+  margin-left: 0px !important;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 0px 10px 0px;
+}
+
+.button_login:hover{
+  background-color: #c58ec3 !important;
+  border:1px solid #c58ec3;
+}
+.activate-user ul li{
+  text-align: left;
+  margin-bottom: 20px;
+}
+.activate-user-images{
+  width:150px;
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+}
+
+.activate-user-images img{
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.activate-user ul li h6{
+  
+}

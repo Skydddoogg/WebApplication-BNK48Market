@@ -74,7 +74,7 @@
   </header>
 
 
-  <div class="container" style="max-width:1000px;">
+  <div class="container bodyContainer" style="max-width:1000px;">
     <div class="row" style="margin-top:20px;">
       <div class="col-3 side_bar_menu">
         <ul>
@@ -90,6 +90,10 @@
           <li>
             <a href="manage-salepost.html">จัดการโพสต์</a>
           </li>
+
+          <li>
+              <a href="save-post.html">โพสที่บันทึกไว้</a>
+            </li>
 
           <li>
             <a href="account-identification.html"=>ยืนยันตัวตน</a>
@@ -110,7 +114,7 @@
                     <ul>
                       <li>
                         <h6>INWZA007</h6>
-                        <div class="verify-icon" aria-label="ยืนยันตัวตนแล้ว"><i class="far fa-check-circle"></i></div>
+                        <div class="verify-icon" aria-label-activate-profile="ยืนยันตัวตนแล้ว"><i class="far fa-check-circle"></i></div>
                       </li>
                       <li>
                         <div class="contact_icon" style="display: block;">
@@ -118,6 +122,7 @@
                             <li><a href="#"><img src="images/contact/facebook.svg" alt=""></a></li>
                             <li><a href="#"><img src="images/contact/line.svg" alt=""></a></li>
                             <li><a href="#"><img src="images/contact/twitter.svg" alt=""></a></li>
+                            <li><a href="#"><img src="images/contact/email.svg" alt=""></a></li>
                           </ul>
                         </div>
                       </li>
@@ -307,6 +312,15 @@
 
   <!-- JAVASCRIPT -->
   <script type="text/javascript" src="js/script.js"></script>
+  <script>  
+  $(".like").click(function(){
+    console.log("Like");
+  });
+
+  $(".dislike").click(function(){
+    console.log("Dislike");
+  });
+  </script>
 
 </body>
 

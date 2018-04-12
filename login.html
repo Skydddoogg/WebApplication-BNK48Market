@@ -12,23 +12,31 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body style="background-color: #fff;">
 
 
 
   <div class="container" style="max-width:100%;">
     <div class="row">
       <div class="col" style="padding:0px; overflow:hidden;">
-          <div class="bnk-login">
-          </div>
+        <div class="bnk-login">
+        </div>
       </div>
       <div class="col" style="padding:0px;">
         <div id="login">
+          <div class="alert alert-danger" role="alert">
+            กรอก Username หรือ Password ผิด กรุณาลองใหม่
+          </div>
           <form action="" class="login-form" method="POST">
             <div class="username-field-login">
               <h6>Username</h6>
               <input type="text" required>
-              <input type="checkbox" name="vehicle" value="Car" checked> <span>Keep Logged In</span>
+              <div class="check_box_login">
+                <input id="login_id_1" type="checkbox" name="type" value="111">
+                <label for="login_id_1">
+                  <span>Keep Logged In</span>
+                </label>
+              </div>
             </div>
             <div class="password-field-login">
               <h6>Password</h6>
@@ -45,50 +53,89 @@
 
 
         <div id="register">
+          <div class="alert alert-danger" role="alert">
+            กรอกข้อมูลผิดพลาดกรุณาลองใหม่
+          </div>
           <h1>Sign Up</h1>
           <h5>It’s free and always will be.</h5>
           <form action="" class="register-form">
-            <div>
-              <h6>First Name : </h6>
-              <input type="text" required>
-            </div>
+            <ul>
+              <li>
+                <h6>First Name : </h6>
+                <input type="text" required>
+              </li>
 
-            <div>
-              <h6>Last Name : </h6>
-              <input type="text" required>
-            </div>
+              <li>
+                <h6>Last Name : </h6>
+                <input type="text" required>
+              </li>
 
-            <div>
-              <h6>Username : </h6>
-              <input type="text" required>
-            </div>
+              <li>
+                <h6>Username : </h6>
+                <input type="text" required>
+              </li>
 
-            <div>
-              <h6>Password : </h6>
-              <input type="text" required>
-            </div>
+              <li>
+                <h6>Password : </h6>
+                <input type="text" required>
+              </li>
 
-            <div>
-              <h6>Your Email : </h6>
-              <input type="text" required>
-            </div>
+              <li>
+                <h6>Your Email : </h6>
+                <input type="text" required>
+              </li>
 
-            <div>
-              <h6>I am : </h6>
-              <select>
-                <option value="male">Male</option>
-                <option value="fe-male">Fe Male</option>
-              </select>
-            </div>
+              <li>
+                <h6>I am : </h6>
+                <select>
+                  <option value="male">Male</option>
+                  <option value="fe-male">Fe Male</option>
+                </select>
+              </li>
 
-            <div>
-              <input type="submit" style="margin-left:90px; width:320px;" class="pink-button" value="Sign Up">
+              <li>
+                <h6></h6>
+                <div class="check_box_login" style="margin: 10px 0 10px 0;">
+                  <input id="login_id_2" type="checkbox" name="type" value="111">
+                  <label for="login_id_2">
+                    <span>ยอมรับเงื่อนไขและข้อตกลง
+                      <a href="#" data-toggle="modal" data-target="#myModal">อ่านข้อตกลง</a>
+                    </span>
+                  </label>
+                </div>
 
-            </div>
+                <!-- Modal -->
+                <div class="custom_modal">
+                  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">ข้อตกลง และข้อกำหนเในการใช้งาน</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          ...
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
 
-            <div>
-              <input type="submit" style="margin-left:90px; width:320px;" class="white-button" value="Play as guest">
-            </div>
+              <li>
+                <input type="submit" style="margin-left:90px; width:320px;" class="pink-button" value="Sign Up">
+
+              </li>
+
+              <li>
+                <input type="submit" style="margin-left:90px; width:320px;" class="white-button" value="Play as guest">
+              </li>
+            </ul>
           </form>
 
         </div>
@@ -97,9 +144,8 @@
         </div>
 
         <div class="login-credit">
-          <span>MARKET48 is a part of project in Information Technology Fundamentals subject, IT@KMITL.
-© 2018 MARKET48</span>
-</div>
+          <span>MARKET48 is a part of project in Information Technology Fundamentals subject, IT@KMITL. © 2018 MARKET48</span>
+        </div>
 
       </div>
     </div>
@@ -111,7 +157,12 @@
   <!-- JAVASCRIPT -->
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
-
+  <!--modal-->
+  <script>
+    $(document).ready(function () {
+      $("#myModal").hide();
+    });
+  </script>
 </body>
 
 </html>
