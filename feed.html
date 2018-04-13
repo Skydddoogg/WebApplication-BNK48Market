@@ -65,8 +65,8 @@
                 </li>
 
                 <li>
-                    <a href="">โพสที่บันทึกไว้</a>
-                  </li>
+                  <a href="">โพสที่บันทึกไว้</a>
+                </li>
 
                 <li>
                   <a href="">ยืนยันตัวตน</a>
@@ -337,6 +337,8 @@
           </div>
 
           <div class="post_thumbnail">
+            <div class="save_post_button">
+            </div>
             <img src="https://pbs.twimg.com/media/DB2g6q_UAAI742W.jpg" alt="">
           </div>
 
@@ -360,10 +362,10 @@
                 </li>
 
                 <li>
-                    <a href="#">
-                        <img src="images/contact/email.svg" alt="">
-                    </a>
-                  </li>
+                  <a href="#">
+                    <img src="images/contact/email.svg" alt="">
+                  </a>
+                </li>
               </ul>
             </div>
             <button post-id="1" class="contact_button">ติดต่อผู้ขาย</button>
@@ -487,6 +489,8 @@
           </div>
 
           <div class="post_thumbnail">
+            <div class="save_post_button">
+            </div>
             <img src="https://pbs.twimg.com/media/DC0Ng96UQAEEhz_.jpg" alt="">
           </div>
 
@@ -511,10 +515,10 @@
                   </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <img src="images/contact/email.svg" alt="">
-                    </a>
-                  </li>
+                  <a href="#">
+                    <img src="images/contact/email.svg" alt="">
+                  </a>
+                </li>
               </ul>
             </div>
             <button post-id="2" class="contact_button">ติดต่อผู้ขาย</button>
@@ -649,38 +653,65 @@
                 </div>
               </div>
             </li>
+
+            <li>
+              <div class="search_button">
+                <button type="submit" class=" pink-button">ค้นหา</button>
+              </div>
+            </li>
           </ul>
 
         </div>
 
-        <script type="text/javascript">
-          var filterDiv = $("#filter").offset().top;
-          $(window).scroll(function () {
-            if ($(window).scrollTop() > filterDiv -80) {
-              $('#filter').css({
-                'position': 'fixed',
-                'top': '80px',
-                'z-index': '1',
-                'width': '318px'
-              });
-            } else {
-              $('#filter').css({
-                'position': 'relative',
-                'top': 'auto'
-              });
-            }
-            
-          });
-        </script>
+
       </div>
     </div>
   </div>
 
   <div class="overlay"></div>
 
+  <!-- Saveed ! Post Success Message Alert Box -->
+  <div class="save_post_alert">
+    <div class="alert alert-success" role="alert">
+      <h4 class="alert-heading">บันทึกโพสสำเร็จ !</h4>
+      <p>สามารถดูโพสที่บันทึกได้ที่เมนู "โพสที่บันทึกไว้"</p>
+    </div>
+  </div>
+
   <!-- JAVASCRIPT -->
   <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript">
+    var filterDiv = $("#filter").offset().top;
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > filterDiv - 80) {
+        $('#filter').css({
+          'position': 'fixed',
+          'top': '80px',
+          'z-index': '1',
+          'width': '318px'
+        });
+      } else {
+        $('#filter').css({
+          'position': 'relative',
+          'top': 'auto'
+        });
+      }
 
+    });
+
+    $(".post_thumbnail").ready(function () {
+      $(this).find(".save_post_button").click(function () {
+        console.log("SavePost");
+        $(this).toggleClass("save_post_active");
+        if ($(this).hasClass("save_post_active")) {
+          $(".save_post_alert").addClass("save_post_alert_animation");
+          setTimeout(function () {
+            $(".save_post_alert").removeClass("save_post_alert_animation");
+          }, 1500);
+        }
+      });
+    })
+  </script>
 </body>
 
 </html>

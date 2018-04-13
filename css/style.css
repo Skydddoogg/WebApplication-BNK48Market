@@ -739,7 +739,6 @@ header {
 }
 
 .post_thumbnail {
-    padding: 10px;
     position: relative;
     border-bottom: 1px solid #efefef;
     padding-bottom: 20px;
@@ -753,6 +752,7 @@ header {
 
 .post_thumbnail img {
     width: 100%;
+    padding: 10px;
 }
 
 .sub_type {
@@ -1663,4 +1663,78 @@ header {
     position: absolute;
     display: flex;
     justify-content: center;
+}
+.save_post_button{
+    position: absolute;
+    right: -100px;
+    top:35px;
+    z-index: 3;
+    transition: all .4s ease;
+}
+
+.save_post_active:after{
+    font-weight: 900 !important;
+}
+
+.save_post_active{
+    animation-name: save_post_active_animation;
+    animation-duration: .2s;
+}
+
+@keyframes save_post_active_animation {
+    from {transform: scale(0.5)}
+    to {transform: scale(1)}
+}
+.save_post_button:after{
+    content:'\f004';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 500;
+    font-size: 35px;
+    color: #fff;
+
+}
+
+
+.post_thumbnail:hover > .save_post_button {
+    right: 35px;
+    transition: all .4s ease;
+}
+.search_button{
+    position: relative;
+    margin-left: -10px;
+}
+.search_button button{
+    width: 100%;
+}
+
+.search_button button::before{
+    content:'\f002';
+    margin-right: 10px;
+    font-weight: 900;
+    font-family: 'Font Awesome 5 Free';
+    /* position: absolute; */
+    top:0;
+    left: 0;
+    color: #fff;
+}
+
+
+.save_post_alert{
+    position: fixed;
+    z-index: 3;
+    bottom:-200px;
+    right: 30px;
+    transition: all 1s ease;
+}
+
+.save_post_alert_animation{
+    animation-name: save_post_alert_animation;
+    animation-duration: 1s;
+    bottom: 20px;
+}
+
+
+@keyframes save_post_alert_animation {
+    0%{opacity: 0; bottom: -200px;}
+    to {opacity: 1; bottom: 20px;}
 }
