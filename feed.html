@@ -383,7 +383,7 @@
               </div>
 
               <div class="userdes_post">
-                <h6>INZAWA007
+                <h6><a href="#">INZAWA007</a>
                   <span>1,000 Likes</span>
                 </h6>
                 <p class="date_time_posted">1 นาทีที่แล้ว</p>
@@ -527,8 +527,27 @@
           <div class="clearfix"></div>
         </div>
 
+        <div class="no_more_post">
+            ไม่มีโพสต์ที่จะแสดง กลับขึ้นข้างบนสุด
+        </div>
 
 
+        <div class='loading-post'>
+          <div class='panel-effect'>
+            <div class='fake-effect fe-0'></div>
+            <div class='fake-effect fe-1'></div>
+            <div class='fake-effect fe-2'></div>
+            <div class='fake-effect fe-3'></div>
+            <div class='fake-effect fe-4'></div>
+            <div class='fake-effect fe-5'></div>
+            <div class='fake-effect fe-6'></div>
+            <div class='fake-effect fe-7'></div>
+            <div class='fake-effect fe-8'></div>
+            <div class='fake-effect fe-9'></div>
+            <div class='fake-effect fe-10'></div>
+            <div class='fake-effect fe-11'></div>
+          </div>
+        </div>
 
 
         <div class="post_thumbnail_popup">
@@ -696,8 +715,13 @@
           'top': 'auto'
         });
       }
-
     });
+
+    $('.no_more_post').click(function(){
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        console.log("++");
+      });
 
     $(".post_thumbnail").ready(function () {
       $(this).find(".save_post_button").click(function () {
