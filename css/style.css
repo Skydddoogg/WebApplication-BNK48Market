@@ -1152,6 +1152,14 @@ header {
     margin: 5px 0 0 0;
 }
 
+.sub_comment_description h6 a{
+    color: #000;
+}
+
+.sub_comment_description h6 a:hover{
+    color:#d787df;
+}
+
 .sub_comment_description span {
     font-size: 13px;
     color: #ababac;
