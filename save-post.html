@@ -310,7 +310,7 @@
                         </li>
                         <li>
                           <a href="#">
-                              <img src="images/contact/email.svg" alt="">
+                            <img src="images/contact/email.svg" alt="">
                           </a>
                         </li>
                       </ul>
@@ -375,11 +375,7 @@
                     </div>
                     <div class="contact_icon_save_post" style="display: block;">
                       <ul>
-                        <li>
-                          <a href="#">
-                            <img src="images/contact/facebook.svg" alt="">
-                          </a>
-                        </li>
+
                         <li>
                           <a href="#">
                             <img src="images/contact/line.svg" alt="">
@@ -392,7 +388,7 @@
                         </li>
                         <li>
                           <a href="#">
-                              <img src="images/contact/email.svg" alt="">
+                            <img src="images/contact/email.svg" alt="">
                           </a>
                         </li>
                       </ul>
@@ -438,8 +434,10 @@
       $(this).find(".contact_save_post").hide();
     });
 
-    $(".contact_save_post").css({
-      "right": "-" + $(".contact_save_post").outerWidth() + "px",
+    $(".contact_save_post").each(function() {
+      $(this).css({
+        'right':'-'+$(this).outerWidth()+'px'
+      })
     });
 
 
