@@ -32,7 +32,6 @@ $(document)
     $(".overlay")
       .not(".text")
       .click(function () {
-        $('.exit_thumbnail_popup').hide();
         $(".overlay").fadeOut(200);
         $(".new_post_field").hide();
         $('#set_area_category').hide();
@@ -40,8 +39,6 @@ $(document)
         $('.bottom_new_post > .separator').hide();
         $(".new_post_button").hide();
         $("#image-preview").hide();
-        $(".post_thumbnail_popup").hide();
-        $('body').css({'overflow-y': 'scroll'})
         $('header').css({"z-index": "9"});
       });
 
@@ -315,33 +312,34 @@ $(document)
 
     $(".image-preview").hide();
 
-    $('.post_thumbnail img').click(function () {
-      thumbnailPopup(this);
+    $('.post_thumbnail').click(function () {
+      thumbnailPopup($(this).find('img'));
     });
 
-    $(".thumbnail_save_post img").click(function () {
-      thumbnailPopup(this);
+    $(".thumbnail_save_post").click(function () {
+      thumbnailPopup($(this).find('img'));
     });
 
     function thumbnailPopup(obj) {
       var src = $(obj).attr('src');
+      var image = new Image();
       $('.post_thumbnail_popup img').attr('src', src);
-      $(".overlay").fadeIn(200);
-      $('.post_thumbnail_popup').show();
-      $('.overlay').css({'z-index': 4})
+      $('.post_thumbnail_popup').css({'display': 'flex'});
+      $('body').css({'overflow': 'hidden'});
       $('.exit_thumbnail_popup').show();
-      $('body').css({'overflow': 'hidden'})
-      $('.post_thumbnail_popup').css({
-        'top': ($(window).scrollTop() - 50) + 'px'
-      });
       $('header').css({"z-index": "4"});
     }
+
+    $('.post_thumbnail_popup').click(function(){
+      $(this).hide();
+      $('body').css({'overflow': 'scroll'})
+    });
 
     $('.exit_thumbnail_popup')
       .click(function () {
         $('.post_thumbnail_popup').hide();
-        $(".overlay").fadeOut(200);
         $(this).hide();
+        $('body').css({'overflow': 'scroll'})
         $('header').css({"z-index": "9"});
       });
 
