@@ -339,7 +339,7 @@
           <div class="post_thumbnail">
             <div class="save_post_button">
             </div>
-            <img src="https://i.pinimg.com/564x/51/3e/76/513e765828e7a0c9fa07ebe4e989a980.jpg" alt="">
+            <img src="https://scontent.fbkk18-1.fna.fbcdn.net/v/t31.0-8/30420821_2052271768366245_466609643426176883_o.jpg?_nc_cat=0&oh=cfa77ae73c045c770491e0b81f5c52f0&oe=5B5BDF0C" alt="">
           </div>
 
           <div class="separator" style="margin-bottom: 0;">
@@ -691,9 +691,9 @@
   </div>
   <!-- Saveed ! Post Success Message Alert Box -->
   <div class="save_post_alert">
-    <div class="alert alert-success" role="alert">
-      <h4 class="alert-heading">บันทึกโพสสำเร็จ !</h4>
-      <p>สามารถดูโพสที่บันทึกได้ที่เมนู "โพสที่บันทึกไว้"</p>
+    <div class="popup-success" role="alert">
+      <h4 class="alert-heading">บันทึกโพสสำเร็จ ! <p>สามารถดูโพสที่บันทึกได้ที่เมนู "โพสที่บันทึกไว้"</p></h4>
+      
     </div>
   </div>
 
@@ -734,18 +734,16 @@
     $('.no_more_post').click(function(){
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
-        console.log("++");
       });
 
     $(".post_thumbnail").ready(function () {
       $(this).find(".save_post_button").click(function () {
-        console.log("SavePost");
         $(this).toggleClass("save_post_active");
         if ($(this).hasClass("save_post_active")) {
           $(".save_post_alert").addClass("save_post_alert_animation");
           setTimeout(function () {
             $(".save_post_alert").removeClass("save_post_alert_animation");
-          }, 1500);
+          }, 2500);
         }
       });
     })
