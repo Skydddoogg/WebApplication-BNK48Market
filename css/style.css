@@ -3,6 +3,8 @@ input[type="file"] {
     /* "hand" cursor */
 }
 
+
+
 .bodyContainer {
     margin-top: 80px;
 }
@@ -756,6 +758,7 @@ header {
 .post_thumbnail {
     position: relative;
     overflow: hidden;
+    max-height: 492px;
 }
 
 .post_thumbnail:hover {
@@ -1967,4 +1970,9 @@ word-wrap: break-word;
       border-radius: 4px;
       border:1px solid #efefef;
       text-decoration: underline;
+    }
+
+    .checkboxDetected::before{
+        border-color: red !important;
+        content:'';
     }

@@ -14,7 +14,8 @@
   <!-- Awsome ICON -->
   <link rel="stylesheet" href="css/fontawesome-all.css">
   <!-- Script -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
   <!-- Ajax -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- Privew Image Upload -->
@@ -29,7 +30,7 @@
         <div class="col">
           <div id="logo">
             <a href="feed.html">
-            <h2>MARKET48</h2>
+              <h2>MARKET48</h2>
             </a>
           </div>
         </div>
@@ -100,121 +101,155 @@
       </div>
       <div class="col-9" style="padding-left:0px;">
         <div class="" id="body">
-
-          <form action="">
-          <div id="account_identification">
-            <ul>
-              <li>
-                <div class="account_identification_img">
-                  <img src="images/identification/selfi-cherpang.png" alt="">
-                </div>
-
-                <!-- UPLOAD IMAGE -->
-                <div class="" id="upload_image">
-                  <div class="account_identification_button">
-                    <div class=" fileContainer" style="margin:0;">
-                      <input type="file" name="imageUpload-1" id="imageUpload-1" class="image-upload" required="">
-                      <label for="imageUpload-1" class="pink-button"><span><i class="far fa-image"></i> เพิ่มรูปภาพ</span></label>
-                    </div>
+          <div class="alert alert-danger empty_field_alert" role="alert" style="display: none;">
+            กรุณากรอกข้อมูลไม่ครบถ้วน
+          </div>
+          <form action="" id="myform">
+            <div id="account_identification">
+              <ul>
+                <li>
+                  <div class="account_identification_img">
+                    <img src="images/identification/selfi-cherpang.png" alt="">
                   </div>
 
-                  <div class="account_identification_image_preview">
-                    <div id="imageUpload-1-preview" class="image-preview">
-                      <div class="image-preview-hover">
-                        <button type="button" class="remove-image-privew"><i class="fas fa-times"></i></button>
+                  <!-- UPLOAD IMAGE -->
+                  <div class="" id="upload_image">
+                    <div class="account_identification_button">
+                      <div class=" fileContainer" style="margin:0;">
+                        <input type="file" name="imageUpload-1" id="imageUpload-1" class="image-upload identification_field">
+                        <label for="imageUpload-1" class="pink-button">
+                          <span>
+                            <i class="far fa-image"></i> เพิ่มรูปภาพ</span>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="account_identification_image_preview">
+                      <div id="imageUpload-1-preview" class="image-preview">
+                        <div class="image-preview-hover">
+                          <button type="button" class="remove-image-privew">
+                            <i class="fas fa-times"></i>
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <!-- END UPLOAD IMAGE -->
-              </li>
-              <li></li>
-            </ul>
+                  <!-- END UPLOAD IMAGE -->
+                </li>
+                <li></li>
+              </ul>
 
-            <div class="clearfix"></div>
-          </div>
-          <div class="separator"></div>
-
+              <div class="clearfix"></div>
+            </div>
+            <div class="separator"></div>
 
 
 
 
-          <div id="account_identification">
-            <ul>
-              <li>
-                <div class="account_identification_img">
-                  <img src="images/identification/selfe-music.png" alt="">
-                </div>
 
-              </li>
-              <li>
-                <div class="verify-suggestion">
-                  <ol type="1">
-                    <li>ต้องสามารถเห็นรายละเอียดชัดเจน โดยถ่ายรูปบัตร หรือ scan สีจากหลักฐานจริงเท่านั้น</li>
-                    <li>ต้องเห็นรูปหน้า และเลขประจำตัวประชาชนชัดเจน</li>
-                    <li>สามารถระบุประทับในหลักฐานว่า “ใช้เฉพาะการสมัครสมาชิก Market48.com”</li>
-                  </ol>
-                </div>
-
-              </li>
-
-              <li style="text-align:center;">
-                <img src="images/identification/card.png" alt="">
-              </li>
-
-              <li>
-                <div class="identification_field">
-                    <h6><b>เลขบัตรประชาชน</b></h6>
-                    <input type="text">
-                </div>
-              </li>
-
-              <li>
-                <!-- UPLOAD IMAGE -->
-                <div class="" id="upload_image">
-                  <div class="account_identification_button">
-                    <div class=" fileContainer" style="margin:0;">
-                      <input type="file" name="imageUpload-2" id="imageUpload-2" class="image-upload" required="">
-                      <label for="imageUpload-2" class="pink-button"><span><i class="far fa-image"></i> เพิ่มรูปภาพ</span></label>
-                    </div>
+            <div id="account_identification">
+              <ul>
+                <li>
+                  <div class="account_identification_img">
+                    <img src="images/identification/selfe-music.png" alt="">
                   </div>
 
-                  <div class="account_identification_image_preview">
-                    <div id="imageUpload-2-preview" class="image-preview">
-                      <div class="image-preview-hover">
-                        <button type="button" class="remove-image-privew"><i class="fas fa-times"></i></button>
+                </li>
+                <li>
+                  <div class="verify-suggestion">
+                    <ol type="1">
+                      <li>ต้องสามารถเห็นรายละเอียดชัดเจน โดยถ่ายรูปบัตร หรือ scan สีจากหลักฐานจริงเท่านั้น</li>
+                      <li>ต้องเห็นรูปหน้า และเลขประจำตัวประชาชนชัดเจน</li>
+                      <li>สามารถระบุประทับในหลักฐานว่า “ใช้เฉพาะการสมัครสมาชิก Market48.com”</li>
+                    </ol>
+                  </div>
+
+                </li>
+
+                <li style="text-align:center;">
+                  <img src="images/identification/card.png" alt="">
+                </li>
+
+                <li>
+                  <div class="identification_field">
+                    <h6>
+                      <b>เลขบัตรประชาชน</b>
+                    </h6>
+                    <input type="text" class="identification_field">
+                  </div>
+                </li>
+
+                <li>
+                  <!-- UPLOAD IMAGE -->
+                  <div class="" id="upload_image">
+                    <div class="account_identification_button">
+                      <div class=" fileContainer" style="margin:0;">
+                        <input type="file" name="imageUpload-2" id="imageUpload-2" class="image-upload identification_field">
+                        <label for="imageUpload-2" class="pink-button">
+                          <span>
+                            <i class="far fa-image"></i> เพิ่มรูปภาพ</span>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="account_identification_image_preview">
+                      <div id="imageUpload-2-preview" class="image-preview">
+                        <div class="image-preview-hover">
+                          <button type="button" class="remove-image-privew">
+                            <i class="fas fa-times"></i>
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <!-- END UPLOAD IMAGE -->
-              </li>
-            </ul>
+                  <!-- END UPLOAD IMAGE -->
+                </li>
+              </ul>
 
-            <script type="text/javascript">
-              $(document).ready(function() {
-                $("#imageUpload-1").change(function() {
-                  $.readURL(this);
+              <script type="text/javascript">
+                $(document).ready(function () {
+                  $("#imageUpload-1").change(function () {
+                    $.readURL(this);
+                  });
+
+                  $("#imageUpload-2").change(function () {
+                    $.readURL(this);
+                  });
+
+                  var detect = false;
+                  $('#myform').on('submit', function () {
+                    $(".identification_field").each(function (e) {
+                      var value = $(this).val();
+                      if (value == '') {
+                        $(this).css({ 'border-color': 'red' });
+                        $('.empty_field_alert').show();
+                        $(window).scrollTop(0);
+                      } else {
+                        $(this).css({ 'border-color': '#d4dce4' });
+                        if (e == 3) { detect = true }
+                      }
+                    });
+
+                    if (detect) {
+                      $('.empty_field_alert').hide();
+                    }
+                    return detect;
+                  });
                 });
+              </script>
 
-                $("#imageUpload-2").change(function() {
-                  $.readURL(this);
-                });
-              });
-            </script>
+              <div class="clearfix"></div>
 
-            <div class="clearfix"></div>
-
-          </div>
+            </div>
 
 
-          <div class="separator"></div>
+            <div class="separator"></div>
 
 
-          <div class="account_identification_page_button">
-            <input type="submit" class="pink-button" value="สร้างโพสต์">
-          </div>
-        </form>
+            <div class="account_identification_page_button">
+              <input type="submit" class="pink-button" value="สร้างโพสต์">
+            </div>
+          </form>
           <div class="clearfix"></div>
         </div>
       </div>

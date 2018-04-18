@@ -56,33 +56,36 @@
           <div class="alert alert-danger" role="alert">
             กรอกข้อมูลผิดพลาดกรุณาลองใหม่
           </div>
+          <div class="alert alert-danger empty_field_alert" role="alert" style="display: none;">
+            กรุณากรอกข้อมูลไม่ครบถ้วน
+          </div>
           <h1>Sign Up</h1>
           <h5>It’s free and always will be.</h5>
-          <form action="" class="register-form">
+          <form action="" id="myform" class="register-form">
             <ul>
               <li>
                 <h6>First Name : </h6>
-                <input type="text" required>
+                <input type="text" class="register_field">
               </li>
 
               <li>
                 <h6>Last Name : </h6>
-                <input type="text" required>
+                <input type="text" class="register_field">
               </li>
 
               <li>
                 <h6>Username : </h6>
-                <input type="text" required>
+                <input type="text" class="register_field">
               </li>
 
               <li>
                 <h6>Password : </h6>
-                <input type="text" required>
+                <input type="text" class="register_field">
               </li>
 
               <li>
                 <h6>Your Email : </h6>
-                <input type="text" required>
+                <input type="text" class="register_field">
               </li>
 
               <li>
@@ -96,8 +99,8 @@
               <li>
                 <h6></h6>
                 <div class="check_box_login" style="margin: 10px 0 10px 0;">
-                  <input id="login_id_2" type="checkbox" name="type" value="111">
-                  <label for="login_id_2">
+                  <input id="checkboxLogin" class="checkboxLogin2" type="checkbox" name="type" value="true" autofocus>
+                  <label for="checkboxLogin">
                     <span>ยอมรับเงื่อนไขและข้อตกลง
                       <a href="#" data-toggle="modal" data-target="#myModal">อ่านข้อตกลง</a>
                     </span>
@@ -128,8 +131,9 @@
               </li>
 
               <li>
-                <input type="submit" style="margin-left:90px; width:320px;" class="pink-button" value="Sign Up">
-
+                <div class="submit">
+                  <input type="submit" style="margin-left:90px; width:320px;" class="pink-button submit" placeholder="Sign Up">
+                </div>
               </li>
 
               <li>
@@ -160,7 +164,38 @@
   <!--modal-->
   <script>
     $(document).ready(function () {
+
       $("#myModal").hide();
+      var detect = false;
+      $('#myform').on('submit', function () {
+        $(".register_field").each(function (e) {
+          var value = $(this).val();
+          if (value == '') {
+            $(this).css({ 'border-color': 'red' });
+            $('.empty_field_alert').show();
+
+          } else {
+            $(this).css({ 'border-color': '#d4dce4' });
+            if(e == 4){detect = true}
+          }
+        });
+        if ($('.checkboxLogin2').is(':checked')) {
+          detect = true
+        }else{
+          detect = false;
+          $('[for=checkboxLogin]').addClass("checkboxDetected");
+        }
+
+        if(detect){
+          $('.empty_field_alert').hide();
+        }
+
+        return detect;
+      });
+
+      
+
+
     });
   </script>
 </body>
