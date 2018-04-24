@@ -47,7 +47,8 @@ button {
 }
 
 input[type="password"],
-input[type="text"] {
+input[type="text"],
+input[type="email"] {
     height: 45px;
     padding-left: 10px;
     padding-right: 10px;
@@ -1285,7 +1286,9 @@ header {
 }
 
 .edit_profile_layout ul li input[type=text],
-.edit_profile_layout ul li input[type=password] {
+.edit_profile_layout ul li input[type=password],
+.edit_profile_layout ul li input[type=email] 
+{
     width: 250px;
     font-size: 13px;
     color: #696d75;
