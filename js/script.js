@@ -89,7 +89,7 @@ $(document)
         function updateCategorySet() {
             $('.category_type').empty();
             $.ajax({
-                url: 'http://market48.toppy.in.th/api/category',
+                url: 'https://market48.toppy.in.th/api/category',
                 dataType: 'json',
                 type: 'GET',
                 tryCount: 0,
@@ -140,7 +140,7 @@ $(document)
 
         function updateCategoryType() {
             $.ajax({
-                url: 'http://market48.toppy.in.th/api/category',
+                url: 'https://market48.toppy.in.th/api/category',
                 dataType: 'json',
                 type: 'GET',
                 tryCount: 0,
@@ -195,7 +195,7 @@ $(document)
 
         $('#filter_category').change(function () {
             $.ajax({
-                url: 'http://market48.toppy.in.th/api/category',
+                url: 'https://market48.toppy.in.th/api/category',
                 dataType: 'json',
                 type: 'GET',
                 tryCount: 0,
@@ -233,7 +233,7 @@ $(document)
 
         function updateFilterCategoryType() {
             $.ajax({
-                url: 'http://market48.toppy.in.th/api/category',
+                url: 'https://market48.toppy.in.th/api/category',
                 dataType: 'json',
                 type: 'GET',
                 tryCount: 0,
